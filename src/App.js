@@ -1,10 +1,12 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import './styles.css';
 import makeup from "./assets/img/makeup.jpg";
 import juice from "./assets/img/juice.jpg";
 import moisture from "./assets/img/moisture.jpg";
+SwiperCore.use([Navigation, Pagination]);
 function App() {
   const slides = [];
   slides.push(
@@ -36,7 +38,7 @@ function App() {
   )
   return <React.Fragment>
     <Swiper id="main" tag="section"
-      wrapperTag="ul">
+      wrapperTag="ul" navigation pagination>
       {slides}
     </Swiper>
   </React.Fragment>
