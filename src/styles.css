@@ -1,6 +1,10 @@
 * {
   margin: 0;
 }
+:root {
+  /* Change default swiper navigation arrow color */
+  --swiper-theme-color: #fff;
+}
 .App {
   text-align: center;
 }
